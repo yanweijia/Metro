@@ -1,18 +1,102 @@
 package cn.yanweijia.dao;
 
 
+import java.util.List;
+
+import cn.yanweijia.beans.Edge;
+import cn.yanweijia.utils.CalcDistance;
+import cn.yanweijia.utils.DBHelper;
+import cn.yanweijia.utils.GetHTML;
+import cn.yanweijia.utils.Tools;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import net.sf.json.util.JSONTokener;
 
-public class test {
+/**
+_ooOoo_
+o8888888o
+88" . "88
+(| -_- |)
+O\ = /O
+____/`---'\____
+.   ' \\| |// `.
+/ \\||| : |||// \
+/ _||||| -:- |||||- \
+| | \\\ - /// | |
+| \_| ''\---/'' | |
+\ .-\__ `-` ___/-. /
+___`. .' /--.--\ `. . __
+."" '< `.___\_<|>_/___.' >'"".
+| | : `- \`.;`\ _ /`;.`/ - ` : | |
+\ \ `-. \_ __\ /__ _/ .-` / /
+======`-.____`-.___\_____/___.-`____.-'======
+`=---='
+.............................................
+佛祖保佑             永无BUG
+佛曰:
+写字楼里写字间，写字间里程序员；
+程序人员写程序，又拿程序换酒钱。
+酒醒只在网上坐，酒醉还来网下眠；
+酒醉酒醒日复日，网上网下年复年。
+但愿老死电脑间，不愿鞠躬老板前；
+奔驰宝马贵者趣，公交自行程序员。
+别人笑我忒疯癫，我笑自己命太贱；
+不见满街漂亮妹，哪个归得程序员？
+__------__
+/~          ~\                       ,%%%%%%%%,
+|    //^\\//^\|                     ,%%/\%%%%/\%%
+/~~\  ||  o| |o|:~\                  ,%%%\c "" J/%%%
+| |6   ||___|_|_||:|         %.       %%%%/ o  o \%%%
+\__.  /      o  \/'         `%%.     %%%%    _  |%%%
+|   (       O   )           `%%     `%%%%(__Y__)%%'
+/~~~~\    `\  \         /            //       ;%%%%`\-/%%%'
+| |~~\ |     )  ~------~`\            ((       /  `%%%%%%%'
+/' |  | |   /     ____ /~~~)\          \\    .'          |
+(_/'   | | |     /'    |    ( |         \\  /       \  | |
+| | |     \    /   __)/ \          \\/         ) | |
+\  \ \      \/    /' \   `\         \         /_ | |__
+\  \|\        /   | |\___|        (___________)))))))  
+\ |  \____/     | |
+/^~  \        _/ <
+|  |         \       \                神兽保佑
+|  | \        \        \
+-^-\  \       |         )
+`\_______/^\______/   
+*/
+public class updateDB {
 	public static void main(String[] args){
+		
+		
+		
+		
+		
+		
+		
+		
 		Tools.log("软件开始运行");
 		long startTime = System.currentTimeMillis();
 		initializeDB();
 		long endTime = System.currentTimeMillis();
 		Tools.log("加载数据花费时间:" + String.valueOf(endTime-startTime) + "ms");
 	}
+	
+	
+	
+	
+	/**
+	 * 计算站点票价
+	 */
+	public static void calcMetroPrice(){
+		DBHelper dbHelper = new DBHelper();
+		List<Integer> stationList = dbHelper.getStationIDByCityID(dbHelper.getCityIDByName("上海"));
+		List<Edge> edgeList = dbHelper.getEdgeByCityID(dbHelper.getCityIDByName("上海"), 1);
+		
+		
+	}
+	
+	
+	
+	
 	/**
 	 * 更新数据库
 	 */
@@ -23,8 +107,8 @@ public class test {
 		Tools.log("清空完成");
 		dbHelper.close();
 		Tools.log("开始更新地铁线路数据~~~");
-		//加载北京地铁线路信息
-		loadSubwayToDB("http://www.yanweijia.cn/json/json_beijing.html","http://www.yanweijia.cn/json/json_beijing_info.html");
+//		//加载北京地铁线路信息
+//		loadSubwayToDB("http://www.yanweijia.cn/json/json_beijing.html","http://www.yanweijia.cn/json/json_beijing_info.html");
 		//加载上海地铁线路信息
 		loadSubwayToDB("http://www.yanweijia.cn/json/json_shanghai.html","http://www.yanweijia.cn/json/json_shanghai_info.html");
 		

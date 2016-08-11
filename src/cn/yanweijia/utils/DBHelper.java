@@ -1,4 +1,4 @@
-package cn.yanweijia.dao;
+package cn.yanweijia.utils;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,6 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.yanweijia.beans.Edge;
 import cn.yanweijia.beans.Line;
 import cn.yanweijia.beans.Station;
 
@@ -15,7 +16,8 @@ import cn.yanweijia.beans.Station;
  * 数据库操作类
  * @author 严唯嘉
  * @version 1.0
- * @date 2016/07/24
+ * @createDate 2016/07/24
+ * @lastChange 2016/08/11
  */
 public class DBHelper {
 	/**数据库驱动*/
@@ -60,6 +62,29 @@ public class DBHelper {
 		}
 		return true;
 	}
+	
+	/**
+	 * 通过城市名称模糊查询城市ID
+	 * @param cityName 城市中文名
+	 * @return 城市ID
+	 */
+	public int getCityIDByName(String cityName){
+		String sql = "SELECT cityID FROM t_city WHERE cityName_zh LIKE '%" + cityName + "%'";
+		try{
+			rs = stmt.executeQuery(sql);
+			if(!rs.next())
+				return -1;
+			int cityID = rs.getInt("cityID");
+			return cityID;
+		}catch(SQLException e){
+			Tools.log("通过城市名查城市ID出错" + e.getMessage());
+			e.printStackTrace();
+			return -1;
+		}
+	}
+	
+	
+	
 	/**
 	 * 获取指定线路信息
 	 * @param lineID 线路编号
@@ -136,6 +161,67 @@ public class DBHelper {
 			e.printStackTrace();
 			return null;
 		}
+	}
+	
+	/**
+	 * 查询指定城市所有站点ID
+	 * @param cityID 城市编号
+	 * @return 该城市站点ID
+	 */
+	public List<Integer> getStationIDByCityID(int cityID){
+		List<Integer> stationList = new ArrayList<Integer>();
+		//先获取该城市所有线路,再根据线路获取station
+		List<Line> lineList = this.getLineListByCityID(cityID);
+		for(int i = 0 ; i < lineList.size() ; i++){
+			int lineID = lineList.get(i).getLineID();
+			String sql = "SELECT DISTINCT currentStation FROM t_edge WHERE lineID=nextLineID AND lineID=" + lineID;
+			try{
+				rs = stmt.executeQuery(sql);
+				while(rs.next()){
+					Integer stationID = rs.getInt("currentStation");
+					stationList.add(stationID);
+				}
+			}catch(SQLException e){
+				Tools.log("查询指定城市站点ID出错" + e.getMessage());
+				e.printStackTrace();
+				return null;
+			}
+		}
+		return stationList;
+	}
+	
+	/**
+	 * 获取指定城市边权重,
+	 * @param cityID 城市编号
+	 * @param edgeType 边类型,1为距离,2为花费时间
+	 * @return
+	 */
+	public List<Edge> getEdgeByCityID(int cityID,int edgeType){
+		if(edgeType<1 || edgeType>2)	//参数传递错误
+			return null;
+		String edgeWeight = edgeType==1?"distance":"costTime";
+		List<Edge> edgeList = new ArrayList<Edge>();
+		//先获取该城市所有线路,再根据线路获取edge
+		List<Line> lineList = this.getLineListByCityID(cityID);
+		for(int i = 0 ; i < lineList.size() ; i++){
+			int lineID = lineList.get(i).getLineID();
+			String sql = "SELECT currentStation,nextStation," + edgeWeight + " FROM t_edge WHERE lineID=nextLineID AND lineID=" + lineID;
+			try{
+				rs = stmt.executeQuery(sql);
+				if(!rs.next())
+					continue;
+				Integer currentStation = rs.getInt("currentStation");
+				Integer nextStation = rs.getInt("nextStation");
+				int weight = rs.getInt(edgeWeight);
+				Edge edge = new Edge(currentStation,nextStation,weight);
+				edgeList.add(edge);
+			}catch(SQLException e){
+				Tools.log("获取城市边权重出错" + e.getMessage());
+				e.printStackTrace();
+				return null;
+			}
+		}
+		return edgeList;
 	}
 	
 	
@@ -599,6 +685,12 @@ public class DBHelper {
 	
 	
 	public DBHelper(){
+		//读取数据库连接信息
+		driver = Tools.getResourceByKey("mysql_driver");
+		url = Tools.getResourceByKey("mysql_url");
+		username = Tools.getResourceByKey("mysql_username");
+		password = Tools.getResourceByKey("mysql_password");
+		
 		try {
 			Class.forName(driver);
 			conn = DriverManager.getConnection(url,username,password);

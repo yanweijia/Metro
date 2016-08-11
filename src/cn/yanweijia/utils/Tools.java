@@ -1,7 +1,11 @@
-package cn.yanweijia.dao;
+package cn.yanweijia.utils;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Properties;
 
 /**
  * 工具类
@@ -17,12 +21,30 @@ public class Tools {
 	 * 测试方法
 	 * @param args
 	 */
-	public static void main(String[] args){
-		log("进入测试");
+//	public static void main(String[] args){
+//		log("进入测试");
+//	}
+	
+	
+	/**
+	 * 获取保存的AccessToken<br>
+	 * @return 返回指定参数的值
+	 */
+	public static String getResourceByKey(String key){
+		Properties properties = new Properties();
+		String value = null;
+		File file = new File(System.getProperty("user.dir") + "\\resource\\config.properties");
+		try{
+			if(!file.exists())	//文件不存在则创建
+				file.createNewFile();
+			FileInputStream in = new FileInputStream(file);
+			properties.load(in);
+			value = properties.getProperty(key);
+			in.close();
+		}catch (IOException e) {e.printStackTrace();}
+		
+		return value;
 	}
-	
-	
-	
 	
 	/**
 	 * 记录日志
@@ -30,9 +52,6 @@ public class Tools {
 	 * @param log 需要记录的日志信息
 	 */
 	public static void log(String log){
-		//TODO:日志文件放在log文件夹里面,当天记录当天生成的日志.
-//		java.io.File file = new java.io.File(LOG_FILENAME);
-//		System.out.println(file.length());
 		log = "[" + getFormatDatetime() + "]:" + log;
 		System.out.println(log);
 		FileWriter fileWriter = null;

@@ -1,4 +1,4 @@
-package cn.yanweijia.dao;
+package cn.yanweijia.utils;
 
 import java.text.DecimalFormat;
 
