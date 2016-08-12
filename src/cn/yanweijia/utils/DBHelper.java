@@ -193,7 +193,7 @@ public class DBHelper {
 	/**
 	 * 获取指定城市边权重,
 	 * @param cityID 城市编号
-	 * @param edgeType 边类型,1为距离,2为花费时间
+	 * @param edgeType 边类型,<strong>1为距离,2为花费时间</strong>
 	 * @return
 	 */
 	public List<Edge> getEdgeByCityID(int cityID,int edgeType){

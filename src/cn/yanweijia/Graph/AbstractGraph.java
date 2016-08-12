@@ -1,7 +1,7 @@
 package cn.yanweijia.Graph;
 public class AbstractGraph<T>
 {
-	public static final int MAX_WEIGHT=0x0000ffff;
+	public static final int MAX_WEIGHT=Integer.MAX_VALUE;
 	protected SeqList<T>vertexlist;
 	public AbstractGraph(int length)
 	{

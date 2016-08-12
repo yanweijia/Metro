@@ -10,17 +10,17 @@ import java.util.List;
  */
 public class Result {
 	/**存放查询结果的节点*/
-	private List<String> vertical;
+	private List<Integer> vertical;
 	/**存放查询结果的总权重(路程/时间)*/
 	private Integer weight;
-	public Result(List<String> vertical,Integer weight){
+	public Result(List<Integer> vertical,Integer weight){
 		this.vertical = vertical;
 		this.weight = weight;
 	}
-	public List<String> getVertical() {
+	public List<Integer> getVertical() {
 		return vertical;
 	}
-	public void setVertical(List<String> vertical) {
+	public void setVertical(List<Integer> vertical) {
 		this.vertical = vertical;
 	}
 	public Integer getWeight() {

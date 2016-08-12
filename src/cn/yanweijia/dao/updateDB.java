@@ -1,9 +1,13 @@
 package cn.yanweijia.dao;
 
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.List;
-
+import java.util.Properties;
+import cn.yanweijia.Graph.Graph;
 import cn.yanweijia.beans.Edge;
+import cn.yanweijia.beans.Result;
 import cn.yanweijia.utils.CalcDistance;
 import cn.yanweijia.utils.DBHelper;
 import cn.yanweijia.utils.GetHTML;
@@ -65,19 +69,14 @@ __------__
 */
 public class updateDB {
 	public static void main(String[] args){
-		
-		
-		
-		
-		
-		
-		
-		
-		Tools.log("软件开始运行");
-		long startTime = System.currentTimeMillis();
-		initializeDB();
-		long endTime = System.currentTimeMillis();
-		Tools.log("加载数据花费时间:" + String.valueOf(endTime-startTime) + "ms");
+		updateDB.calcMetroPrice("上海");
+//		Tools.log("软件开始运行");
+//		long startTime = System.currentTimeMillis();
+//		
+//		initializeDB();
+//		
+//		long endTime = System.currentTimeMillis();
+//		Tools.log("加载数据花费时间:" + String.valueOf(endTime-startTime) + "ms");
 	}
 	
 	
@@ -86,15 +85,26 @@ public class updateDB {
 	/**
 	 * 计算站点票价
 	 */
-	public static void calcMetroPrice(){
+	public static void calcMetroPrice(String cityName){
+		Tools.log("开始计算 " + cityName + " 票价");
 		DBHelper dbHelper = new DBHelper();
-		List<Integer> stationList = dbHelper.getStationIDByCityID(dbHelper.getCityIDByName("上海"));
-		List<Edge> edgeList = dbHelper.getEdgeByCityID(dbHelper.getCityIDByName("上海"), 1);
+		List<Integer> stationList = dbHelper.getStationIDByCityID(dbHelper.getCityIDByName(cityName));
+		List<Edge> edgeList = dbHelper.getEdgeByCityID(dbHelper.getCityIDByName(cityName), 1);
+		for(int i = 0 ; i < stationList.size() - 1 ; i++){
+			for(int j = i + 1 ; j < stationList.size() ; j++){
+				Integer startStation = stationList.get(i);
+				Integer endStation = stationList.get(j);
+				Result result = Graph.getShortestLine(stationList, edgeList, startStation,endStation);
+				if(result == null)
+					continue;
+				Integer weight = result.getWeight();
+				dbHelper.InsertPrice(startStation, endStation, weight);
+			}
+		}
 		
-		
+		dbHelper.close();
+		Tools.log(cityName +"票价计算完成并成功更新至数据库");
 	}
-	
-	
 	
 	
 	/**
@@ -107,25 +117,43 @@ public class updateDB {
 		Tools.log("清空完成");
 		dbHelper.close();
 		Tools.log("开始更新地铁线路数据~~~");
-//		//加载北京地铁线路信息
-//		loadSubwayToDB("http://www.yanweijia.cn/json/json_beijing.html","http://www.yanweijia.cn/json/json_beijing_info.html");
-		//加载上海地铁线路信息
-		loadSubwayToDB("http://www.yanweijia.cn/json/json_shanghai.html","http://www.yanweijia.cn/json/json_shanghai_info.html");
+		
+//		loadSubwayToDB("beijing");		//加载北京地铁线路信息
+		
+		loadSubwayToDB("shanghai");		//加载上海地铁线路信息
 		
 		Tools.log("地铁线路数据更新完成!");
+		
+		calcMetroPrice("上海");		//计算上海票价
 	}
+	
+	
 	/**
 	 * 加载指定城市地铁线路信息
-	 * @param jsonURL_station 指定城市地铁线路json数据地址,从高德地图爬取
-	 * @param jsonURL_info 地铁早晚班车等信息
+	 * @param cityName 城市名称,全拼小写,具体在/resource/json.properties文件里
 	 */
-	public static void loadSubwayToDB(String jsonURL_station,String jsonURL_info){
+	public static void loadSubwayToDB(String cityName){
+		Properties prop = new Properties();// 属性集合对象     
+		try{
+			FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/resource/json.properties");// 属性文件输入流     
+			prop.load(fis);// 将属性文件流装载到Properties对象中     
+			fis.close();// 关闭流   
+		}catch(IOException e){
+			e.printStackTrace();
+			return;
+		}
+        //如果加载不到就加载上海的信息
+		String jsonURL_station = prop.getProperty(cityName + "_station");
+		String jsonURL_info = prop.getProperty(cityName + "_info");
 		//加载地铁站点信息
 		loadSubwayStation(jsonURL_station);
 		//加载早晚班车信息,计算站点距离. (先忽略票价,票价由最短路径计算路径,然后根据路径长度计算票价)
 		loadSubwayTimeTableInfo(jsonURL_info);
 	}
 
+	
+	
+	
 	/**
 	 * 加载城市地铁线路站点数据
 	 * @param jsonURL_station
