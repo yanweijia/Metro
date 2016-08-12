@@ -17,17 +17,11 @@ public class Tools {
 	/**日志文件存放地址*/
 	private static final String LOG_FILENAME = "runtime.log";
 	
-	/**
-	 * 测试方法
-	 * @param args
-	 */
-//	public static void main(String[] args){
-//		log("进入测试");
-//	}
-	
+
 	
 	/**
 	 * 获取保存的AccessToken<br>
+	 * @param key 键值
 	 * @return 返回指定参数的值
 	 */
 	public static String getResourceByKey(String key){
@@ -45,6 +39,27 @@ public class Tools {
 		
 		return value;
 	}
+	
+	
+	/**
+	 * 将指定信息写入到文件,不追加,直接覆盖
+	 * @param path 写入的地址
+	 * @param str 目标字符串
+	 * @return 是否写入成功
+	 */
+	public static boolean writeToFile(String path,String str){
+		FileWriter fileWriter = null;
+		try{
+			fileWriter = new FileWriter(path,false);	//非追加方式写入
+			fileWriter.write(str);
+			fileWriter.close();
+			return true;
+		}catch(IOException e){
+			e.printStackTrace();
+			return false;
+		}
+	}
+	
 	
 	/**
 	 * 记录日志

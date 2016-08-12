@@ -2,11 +2,14 @@ package cn.yanweijia.Graph;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import cn.yanweijia.beans.Edge;
 import cn.yanweijia.beans.Result;
 public class Graph {
 
+	/**
+	 * 测试
+	 * @param args
+	 */
 	public static void main(String[] args){
 		List<String> list = new ArrayList<String>();
 		list.add("111");

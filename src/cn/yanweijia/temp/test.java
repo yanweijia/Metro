@@ -1,14 +1,24 @@
 package cn.yanweijia.temp;
 
+import java.util.List;
+
+import cn.yanweijia.beans.Edge;
+import cn.yanweijia.utils.DBHelper;
+import cn.yanweijia.utils.Tools;
+
 public class test {
 	public static void main(String[] args){
-		int[] a = {1,2,3,4,5,6,7,8,9};
-		for(int i = 0 ; i < a.length; i++){
-			for(int j = i + 1 ; j < a.length ; j++){
-				String result = "" + a[i] + "x" + a[j] + "=" + (a[i]*a[j]);
-				System.out.print(result + "   ");
-			}
-			System.out.println();
+		DBHelper dbHelper = new DBHelper();
+		String cityName = "上海";
+		//List<Integer> stationList = dbHelper.getStationIDByCityID(dbHelper.getCityIDByName(cityName));
+		List<Edge> edgeList = dbHelper.getEdgeByCityID(dbHelper.getCityIDByName(cityName), 1);
+		String result = "";
+		for(int i = 0 ; i < edgeList.size() ; i++){
+			Edge edge = edgeList.get(i);
+			result += edge.getFrom() + " " + edge.getTo() + " " + edge.getWeight() + "\r\n";
 		}
+		Tools.writeToFile("I:\\result.txt", result);
+		
+		dbHelper.close();
 	}
 }

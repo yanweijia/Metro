@@ -9,6 +9,7 @@ import cn.yanweijia.Graph.Graph;
 import cn.yanweijia.beans.Edge;
 import cn.yanweijia.beans.Result;
 import cn.yanweijia.utils.CalcDistance;
+import cn.yanweijia.utils.CalcPrice;
 import cn.yanweijia.utils.DBHelper;
 import cn.yanweijia.utils.GetHTML;
 import cn.yanweijia.utils.Tools;
@@ -106,18 +107,17 @@ public class updateDB {
 				Integer weight = result.getWeight();
 
 				//正反反向都插入一遍
-				sql += "(" + startStation +"," + endStation + "," + weight + "),";
-				sql += "(" + endStation +"," + startStation + "," + weight + "),";
+				sql += "(" + startStation +"," + endStation + "," + CalcPrice.getPrice(weight, cityName) + "),";
+				sql += "(" + endStation +"," + startStation + "," + CalcPrice.getPrice(weight, cityName) + "),";
 
 				//这样效率太低
-				//dbHelper.InsertPrice(startStation, endStation, weight);
-				//dbHelper.InsertPrice(endStation, startStation, weight);
+				//dbHelper.InsertPrice(startStation, endStation, CalcPrice.getPrice(weight, cityName));
+				//dbHelper.InsertPrice(endStation, startStation, CalcPrice.getPrice(weight, cityName));
 			}
 
 			if(sql.equals(""))
 				continue;
 			//将最后一个','去除
-
 			sql = sql.substring(0, sql.length() - 1);
 			System.out.println(sql);
 			dbHelper.InsertPrice(sql);
