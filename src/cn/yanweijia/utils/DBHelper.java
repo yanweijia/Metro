@@ -208,13 +208,15 @@ public class DBHelper {
 			String sql = "SELECT currentStation,nextStation," + edgeWeight + " FROM t_edge WHERE lineID=nextLineID AND lineID=" + lineID;
 			try{
 				rs = stmt.executeQuery(sql);
-				if(!rs.next())
-					continue;
-				Integer currentStation = rs.getInt("currentStation");
-				Integer nextStation = rs.getInt("nextStation");
-				int weight = rs.getInt(edgeWeight);
-				Edge edge = new Edge(currentStation,nextStation,weight);
-				edgeList.add(edge);
+//				if(!rs.next())
+//					continue;
+				while(rs.next()){
+					Integer currentStation = rs.getInt("currentStation");
+					Integer nextStation = rs.getInt("nextStation");
+					int weight = rs.getInt(edgeWeight);
+					Edge edge = new Edge(currentStation,nextStation,weight);
+					edgeList.add(edge);
+				}
 			}catch(SQLException e){
 				Tools.log("获取城市边权重出错" + e.getMessage());
 				e.printStackTrace();
@@ -611,6 +613,8 @@ public class DBHelper {
 								int price){
 		String sql = "INSERT INTO t_price(stationStart,stationEnd,price)VALUES("
 				+ stationStart + "," + stationEnd + "," + price + ")";
+		if(stationStart==stationEnd)
+			return false;
 		try{
 			int count = stmt.executeUpdate(sql);
 			if(count > 0)
@@ -618,11 +622,32 @@ public class DBHelper {
 			else
 				return false;
 		}catch(SQLException e){
-			Tools.log("DBHelper.java InsertEdge() 数据库插入失败:" + e.getMessage());
+			Tools.log("DBHelper.java InsertPrice() 数据库插入失败:" + e.getMessage());
 			e.printStackTrace();
 		}
 		return false;
 	}
+	
+	/**
+	 * 插入一系列票价信息
+	 * @param info 格式为 (stationStart,stationEnd,price),(...),(...)
+	 * @return 是否插入成功
+	 */
+	public boolean InsertPrice(String info){
+		String sql = "INSERT INTO t_price(stationStart,stationEnd,price)VALUES" + info;
+		try{
+			int count = stmt.executeUpdate(sql);
+			if(count>0)
+				return true;
+			else
+				return false;
+		}catch(SQLException e){
+			Tools.log("DBHelper.java InsertPrice() 数据库插入失败:" + e.getMessage());
+			e.printStackTrace();
+		}
+		return false;
+	}
+	
 	
 	/**
 	 * 插入一条换乘信息

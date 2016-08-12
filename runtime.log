@@ -162,3 +162,267 @@
 [2016-08-12 11:38:02]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000287-31000287' for key 'PRIMARY'
 [2016-08-12 11:38:02]:上海票价计算完成并成功更新至数据库
 [2016-08-12 11:40:47]:开始计算 上海 票价
+[2016-08-12 13:40:11]:开始计算 上海 票价
+[2016-08-12 13:40:11]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000275-31000275' for key 'PRIMARY'
+[2016-08-12 13:40:11]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000287-31000287' for key 'PRIMARY'
+[2016-08-12 13:40:11]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000287-31000287' for key 'PRIMARY'
+[2016-08-12 13:40:12]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000287-31000287' for key 'PRIMARY'
+[2016-08-12 13:40:12]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000032-31000032' for key 'PRIMARY'
+[2016-08-12 13:40:12]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000032-31000032' for key 'PRIMARY'
+[2016-08-12 13:40:12]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000066-31000066' for key 'PRIMARY'
+[2016-08-12 13:40:12]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000066-31000066' for key 'PRIMARY'
+[2016-08-12 13:40:13]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000094-31000094' for key 'PRIMARY'
+[2016-08-12 13:40:13]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000094-31000094' for key 'PRIMARY'
+[2016-08-12 13:40:13]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000119-31000119' for key 'PRIMARY'
+[2016-08-12 13:40:13]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000119-31000119' for key 'PRIMARY'
+[2016-08-12 13:40:14]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000202-31000202' for key 'PRIMARY'
+[2016-08-12 13:40:14]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000237-31000237' for key 'PRIMARY'
+[2016-08-12 13:40:14]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000282-31000282' for key 'PRIMARY'
+[2016-08-12 13:40:14]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000282-31000282' for key 'PRIMARY'
+[2016-08-12 13:40:15]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:40:15]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000262-31000262' for key 'PRIMARY'
+[2016-08-12 13:40:16]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:40:16]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000258-31000258' for key 'PRIMARY'
+[2016-08-12 13:40:17]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000119-31000119' for key 'PRIMARY'
+[2016-08-12 13:40:17]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000255-31000255' for key 'PRIMARY'
+[2016-08-12 13:40:18]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000256-31000256' for key 'PRIMARY'
+[2016-08-12 13:40:18]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000263-31000263' for key 'PRIMARY'
+[2016-08-12 13:40:18]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000278-31000278' for key 'PRIMARY'
+[2016-08-12 13:40:18]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000278-31000278' for key 'PRIMARY'
+[2016-08-12 13:40:18]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000281-31000281' for key 'PRIMARY'
+[2016-08-12 13:40:18]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000281-31000281' for key 'PRIMARY'
+[2016-08-12 13:40:19]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000283-31000283' for key 'PRIMARY'
+[2016-08-12 13:40:19]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000283-31000283' for key 'PRIMARY'
+[2016-08-12 13:40:19]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000285-31000285' for key 'PRIMARY'
+[2016-08-12 13:40:19]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000285-31000285' for key 'PRIMARY'
+[2016-08-12 13:40:19]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000287-31000287' for key 'PRIMARY'
+[2016-08-12 13:40:19]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000287-31000287' for key 'PRIMARY'
+[2016-08-12 13:40:20]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000292-31000292' for key 'PRIMARY'
+[2016-08-12 13:40:20]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000292-31000292' for key 'PRIMARY'
+[2016-08-12 13:40:20]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000292-31000292' for key 'PRIMARY'
+[2016-08-12 13:40:20]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000040-31000040' for key 'PRIMARY'
+[2016-08-12 13:40:20]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000040-31000040' for key 'PRIMARY'
+[2016-08-12 13:40:20]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000041-31000041' for key 'PRIMARY'
+[2016-08-12 13:40:21]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000042-31000042' for key 'PRIMARY'
+[2016-08-12 13:40:21]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000043-31000043' for key 'PRIMARY'
+[2016-08-12 13:40:21]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000062-31000062' for key 'PRIMARY'
+[2016-08-12 13:40:21]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000063-31000063' for key 'PRIMARY'
+[2016-08-12 13:40:21]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000064-31000064' for key 'PRIMARY'
+[2016-08-12 13:40:22]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000064-31000064' for key 'PRIMARY'
+[2016-08-12 13:40:22]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000065-31000065' for key 'PRIMARY'
+[2016-08-12 13:40:22]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000066-31000066' for key 'PRIMARY'
+[2016-08-12 13:40:22]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000067-31000067' for key 'PRIMARY'
+[2016-08-12 13:40:22]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000068-31000068' for key 'PRIMARY'
+[2016-08-12 13:40:22]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000069-31000069' for key 'PRIMARY'
+[2016-08-12 13:40:23]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000070-31000070' for key 'PRIMARY'
+[2016-08-12 13:40:23]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000071-31000071' for key 'PRIMARY'
+[2016-08-12 13:40:23]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000072-31000072' for key 'PRIMARY'
+[2016-08-12 13:40:23]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000073-31000073' for key 'PRIMARY'
+[2016-08-12 13:40:23]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000074-31000074' for key 'PRIMARY'
+[2016-08-12 13:40:24]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000075-31000075' for key 'PRIMARY'
+[2016-08-12 13:40:24]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000076-31000076' for key 'PRIMARY'
+[2016-08-12 13:40:24]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000257-31000257' for key 'PRIMARY'
+[2016-08-12 13:40:24]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000281-31000281' for key 'PRIMARY'
+[2016-08-12 13:40:24]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000289-31000289' for key 'PRIMARY'
+[2016-08-12 13:40:25]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000289-31000289' for key 'PRIMARY'
+[2016-08-12 13:40:25]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000289-31000289' for key 'PRIMARY'
+[2016-08-12 13:40:25]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000290-31000290' for key 'PRIMARY'
+[2016-08-12 13:40:25]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000290-31000290' for key 'PRIMARY'
+[2016-08-12 13:40:25]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000290-31000290' for key 'PRIMARY'
+[2016-08-12 13:40:25]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000291-31000291' for key 'PRIMARY'
+[2016-08-12 13:40:25]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000291-31000291' for key 'PRIMARY'
+[2016-08-12 13:40:26]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000291-31000291' for key 'PRIMARY'
+[2016-08-12 13:40:26]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000294-31000294' for key 'PRIMARY'
+[2016-08-12 13:40:26]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000294-31000294' for key 'PRIMARY'
+[2016-08-12 13:40:26]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000294-31000294' for key 'PRIMARY'
+[2016-08-12 13:40:26]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000322-31000322' for key 'PRIMARY'
+[2016-08-12 13:40:27]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000323-31000323' for key 'PRIMARY'
+[2016-08-12 13:40:27]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000336-31000336' for key 'PRIMARY'
+[2016-08-12 13:40:27]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000239-31000239' for key 'PRIMARY'
+[2016-08-12 13:40:28]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000272-31000272' for key 'PRIMARY'
+[2016-08-12 13:40:28]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000274-31000274' for key 'PRIMARY'
+[2016-08-12 13:40:28]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000290-31000290' for key 'PRIMARY'
+[2016-08-12 13:40:28]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000290-31000290' for key 'PRIMARY'
+[2016-08-12 13:41:06]:开始计算 上海 票价
+[2016-08-12 13:41:06]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000275-31000275' for key 'PRIMARY'
+[2016-08-12 13:41:06]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000275-31000275' for key 'PRIMARY'
+[2016-08-12 13:41:06]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000287-31000287' for key 'PRIMARY'
+[2016-08-12 13:41:06]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000287-31000287' for key 'PRIMARY'
+[2016-08-12 13:41:07]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000287-31000287' for key 'PRIMARY'
+[2016-08-12 13:41:07]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000287-31000287' for key 'PRIMARY'
+[2016-08-12 13:41:07]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000287-31000287' for key 'PRIMARY'
+[2016-08-12 13:41:07]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000287-31000287' for key 'PRIMARY'
+[2016-08-12 13:41:07]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000032-31000032' for key 'PRIMARY'
+[2016-08-12 13:41:07]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000032-31000032' for key 'PRIMARY'
+[2016-08-12 13:41:07]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000032-31000032' for key 'PRIMARY'
+[2016-08-12 13:41:08]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000032-31000032' for key 'PRIMARY'
+[2016-08-12 13:41:08]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000066-31000066' for key 'PRIMARY'
+[2016-08-12 13:41:08]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000066-31000066' for key 'PRIMARY'
+[2016-08-12 13:41:08]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000066-31000066' for key 'PRIMARY'
+[2016-08-12 13:41:08]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000066-31000066' for key 'PRIMARY'
+[2016-08-12 13:41:09]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000094-31000094' for key 'PRIMARY'
+[2016-08-12 13:41:09]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000094-31000094' for key 'PRIMARY'
+[2016-08-12 13:41:09]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000094-31000094' for key 'PRIMARY'
+[2016-08-12 13:41:09]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000094-31000094' for key 'PRIMARY'
+[2016-08-12 13:41:09]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000119-31000119' for key 'PRIMARY'
+[2016-08-12 13:41:09]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000119-31000119' for key 'PRIMARY'
+[2016-08-12 13:41:10]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000119-31000119' for key 'PRIMARY'
+[2016-08-12 13:41:10]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000119-31000119' for key 'PRIMARY'
+[2016-08-12 13:41:10]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000202-31000202' for key 'PRIMARY'
+[2016-08-12 13:41:12]:开始计算 上海 票价
+[2016-08-12 13:46:24]:开始计算 上海 票价
+[2016-08-12 13:48:08]:开始计算 上海 票价
+[2016-08-12 13:48:08]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000275-31000275' for key 'PRIMARY'
+[2016-08-12 13:48:08]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000275-31000275' for key 'PRIMARY'
+[2016-08-12 13:48:08]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000287-31000287' for key 'PRIMARY'
+[2016-08-12 13:48:08]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000287-31000287' for key 'PRIMARY'
+[2016-08-12 13:49:06]:开始计算 上海 票价
+[2016-08-12 13:51:00]:开始计算 上海 票价
+[2016-08-12 13:51:23]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000275-31000275' for key 'PRIMARY'
+[2016-08-12 13:51:23]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000275-31000275' for key 'PRIMARY'
+[2016-08-12 13:52:12]:开始计算 上海 票价
+[2016-08-12 13:53:46]:开始计算 上海 票价
+[2016-08-12 13:53:47]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000275-31000275' for key 'PRIMARY'
+[2016-08-12 13:53:47]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000275-31000275' for key 'PRIMARY'
+[2016-08-12 13:53:48]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000287-31000287' for key 'PRIMARY'
+[2016-08-12 13:53:48]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000287-31000287' for key 'PRIMARY'
+[2016-08-12 13:53:49]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000287-31000287' for key 'PRIMARY'
+[2016-08-12 13:53:49]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000287-31000287' for key 'PRIMARY'
+[2016-08-12 13:55:07]:开始计算 上海 票价
+[2016-08-12 13:55:08]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000275-31000275' for key 'PRIMARY'
+[2016-08-12 13:55:08]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000275-31000275' for key 'PRIMARY'
+[2016-08-12 13:55:09]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000287-31000287' for key 'PRIMARY'
+[2016-08-12 13:55:09]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000287-31000287' for key 'PRIMARY'
+[2016-08-12 13:55:10]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000287-31000287' for key 'PRIMARY'
+[2016-08-12 13:55:10]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000287-31000287' for key 'PRIMARY'
+[2016-08-12 13:55:10]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000287-31000287' for key 'PRIMARY'
+[2016-08-12 13:55:10]:DBHelper.java InsertEdge() 数据库插入失败:Duplicate entry '31000287-31000287' for key 'PRIMARY'
+[2016-08-12 13:56:06]:开始计算 上海 票价
+[2016-08-12 13:56:09]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:56:09]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:56:10]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:56:10]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:56:10]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:56:10]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:56:10]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:56:10]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:56:10]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:56:10]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:56:11]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:56:11]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:56:11]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:56:11]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:56:11]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:56:11]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:56:11]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:56:11]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:29]:开始计算 上海 票价
+[2016-08-12 13:57:32]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:32]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:32]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:32]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:32]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:33]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:33]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:33]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:33]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:33]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:33]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:33]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:33]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:34]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:34]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:34]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:34]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:34]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:34]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:34]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:34]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:35]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:35]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:35]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:35]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:35]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:35]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:35]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:35]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:36]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:36]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:36]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:36]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:36]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:36]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:36]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:36]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:37]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:37]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:37]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:37]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:37]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:37]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:37]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:37]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:38]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:38]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:38]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:38]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:38]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:38]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:38]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:38]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:39]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:39]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:39]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:39]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:39]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:39]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:39]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:39]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:40]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:40]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:40]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:40]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:40]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:57:40]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:19]:开始计算 上海 票价
+[2016-08-12 13:58:22]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:22]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:22]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:22]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:23]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:23]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:23]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:23]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:23]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:23]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:23]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:23]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:24]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:24]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:24]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:24]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:24]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:24]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:24]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:24]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:25]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:25]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:25]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:25]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:25]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:25]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:25]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:25]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:26]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:26]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:26]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 13:58:26]:DBHelper.java InsertEdge() 数据库插入失败:Data truncation: Out of range value for column 'price' at row 1
+[2016-08-12 14:03:54]:开始计算 上海 票价
+[2016-08-12 14:24:36]:开始计算 上海 票价
+[2016-08-12 14:25:06]:开始计算 上海 票价
+[2016-08-12 14:25:20]:开始计算 上海 票价
+[2016-08-12 14:25:40]:开始计算 上海 票价
+[2016-08-12 14:27:09]:开始计算 上海 票价
+[2016-08-12 14:30:21]:上海票价计算完成并成功更新至数据库
+[2016-08-12 14:37:03]:开始计算 上海 票价
+[2016-08-12 14:40:16]:开始计算 上海 票价

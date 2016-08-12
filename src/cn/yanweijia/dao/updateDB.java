@@ -91,17 +91,38 @@ public class updateDB {
 		List<Integer> stationList = dbHelper.getStationIDByCityID(dbHelper.getCityIDByName(cityName));
 		List<Edge> edgeList = dbHelper.getEdgeByCityID(dbHelper.getCityIDByName(cityName), 1);
 		for(int i = 0 ; i < stationList.size() - 1 ; i++){
+			String sql = "";
 			for(int j = i + 1 ; j < stationList.size() ; j++){
 				Integer startStation = stationList.get(i);
 				Integer endStation = stationList.get(j);
-				Result result = Graph.getShortestLine(stationList, edgeList, startStation,endStation);
-				if(result == null)
+				if(startStation.equals(endStation))
 					continue;
+				Result result = Graph.getShortestLine(stationList, edgeList, startStation,endStation);
+				if(result == null){
+					//System.out.println("" + startStation + "," + endStation);
+					continue;
+				}
+
 				Integer weight = result.getWeight();
-				dbHelper.InsertPrice(startStation, endStation, weight);
+
+				//正反反向都插入一遍
+				sql += "(" + startStation +"," + endStation + "," + weight + "),";
+				sql += "(" + endStation +"," + startStation + "," + weight + "),";
+
+				//这样效率太低
+				//dbHelper.InsertPrice(startStation, endStation, weight);
+				//dbHelper.InsertPrice(endStation, startStation, weight);
 			}
+
+			if(sql.equals(""))
+				continue;
+			//将最后一个','去除
+
+			sql = sql.substring(0, sql.length() - 1);
+			System.out.println(sql);
+			dbHelper.InsertPrice(sql);
+
 		}
-		
 		dbHelper.close();
 		Tools.log(cityName +"票价计算完成并成功更新至数据库");
 	}

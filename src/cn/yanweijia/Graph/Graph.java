@@ -35,7 +35,8 @@ public class Graph {
 			int to = Graph.getIndex(newVertices, String.valueOf(edgeTemp.getTo()));
 			newEdges[i] = new Triple(from,to,edgeTemp.getWeight());
 		}
-		
+		//调试查看vertices和edge的大小
+		//System.out.println("vertices:" + vertices.size() + "edges: " + edges.size());
 		return Graph.getShortestLine_Str(newVertices, newEdges, String.valueOf(startVertice), String.valueOf(endVertice));
 	}
 	
@@ -99,7 +100,7 @@ public class Graph {
 	public static Result convertStringToResult(String str){
 		//TODO:如果有无穷大,如果是无穷大,就返回null
 		if(str.indexOf("∞") >=0){
-			//System.out.println(str);
+			System.out.println(str);
 			return null;
 		}
 		Integer weight = Integer.valueOf(str.substring(str.indexOf(")") + 1));	//已经排除了∞情况,不会发生NumberFormatException异常
