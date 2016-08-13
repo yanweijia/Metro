@@ -163,6 +163,23 @@ public class DBHelper {
 		}
 	}
 	
+	public List<Integer> getAllStationID(){
+		List<Integer> list = new ArrayList<Integer>();
+		String sql = "SELECT stationID FROM t_stationInfo";
+		try{
+			rs = stmt.executeQuery(sql);
+			while(rs.next()){
+				Integer stationID = rs.getInt("stationID");
+				list.add(stationID);
+			}
+			return list;
+		}catch(SQLException e){
+			Tools.log("DBHelper.java getAllStation() 获取所有站点信息出错:" + e.getMessage());
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
 	/**
 	 * 查询指定城市所有站点ID
 	 * @param cityID 城市编号
@@ -170,25 +187,48 @@ public class DBHelper {
 	 */
 	public List<Integer> getStationIDByCityID(int cityID){
 		List<Integer> stationList = new ArrayList<Integer>();
-		//先获取该城市所有线路,再根据线路获取station
-		List<Line> lineList = this.getLineListByCityID(cityID);
-		for(int i = 0 ; i < lineList.size() ; i++){
-			int lineID = lineList.get(i).getLineID();
-			String sql = "SELECT DISTINCT currentStation FROM t_edge WHERE lineID=nextLineID AND lineID=" + lineID;
-			try{
-				rs = stmt.executeQuery(sql);
-				while(rs.next()){
-					Integer stationID = rs.getInt("currentStation");
-					stationList.add(stationID);
-				}
-			}catch(SQLException e){
-				Tools.log("查询指定城市站点ID出错" + e.getMessage());
-				e.printStackTrace();
-				return null;
+		//站点ID的前几位就是城市ID / 其中INSTR(str,substr)是返回substr在str中的位置,从1开始,如果找不到,返回0
+		String sql = "SELECT stationID FROM t_stationInfo WHERE INSTR(stationID,'" + cityID + "')=1";
+		try{
+			rs = stmt.executeQuery(sql);
+			while(rs.next()){
+				Integer stationID = rs.getInt("stationID");
+				stationList.add(stationID);
 			}
+		}catch(SQLException e){
+			Tools.log("查询指定城市站点ID出错" + e.getMessage());
+			e.printStackTrace();
+			return null;
 		}
 		return stationList;
 	}
+	
+	/**
+	 * 查询指定城市所有站点ID
+	 * @param cityID 城市编号
+	 * @return 该城市站点ID
+	 */
+//	public List<Integer> getStationIDByCityID(int cityID){
+//		List<Integer> stationList = new ArrayList<Integer>();
+//		//先获取该城市所有线路,再根据线路获取station
+//		List<Line> lineList = this.getLineListByCityID(cityID);
+//		for(int i = 0 ; i < lineList.size() ; i++){
+//			int lineID = lineList.get(i).getLineID();
+//			String sql = "SELECT DISTINCT currentStation FROM t_edge WHERE lineID=nextLineID AND lineID=" + lineID;
+//			try{
+//				rs = stmt.executeQuery(sql);
+//				while(rs.next()){
+//					Integer stationID = rs.getInt("currentStation");
+//					stationList.add(stationID);
+//				}
+//			}catch(SQLException e){
+//				Tools.log("查询指定城市站点ID出错" + e.getMessage());
+//				e.printStackTrace();
+//				return null;
+//			}
+//		}
+//		return stationList;
+//	}
 	
 	/**
 	 * 获取指定城市边权重,

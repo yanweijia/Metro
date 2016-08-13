@@ -17,57 +17,7 @@ import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import net.sf.json.util.JSONTokener;
 
-/**
-_ooOoo_
-o8888888o
-88" . "88
-(| -_- |)
-O\ = /O
-____/`---'\____
-.   ' \\| |// `.
-/ \\||| : |||// \
-/ _||||| -:- |||||- \
-| | \\\ - /// | |
-| \_| ''\---/'' | |
-\ .-\__ `-` ___/-. /
-___`. .' /--.--\ `. . __
-."" '< `.___\_<|>_/___.' >'"".
-| | : `- \`.;`\ _ /`;.`/ - ` : | |
-\ \ `-. \_ __\ /__ _/ .-` / /
-======`-.____`-.___\_____/___.-`____.-'======
-`=---='
-.............................................
-佛祖保佑             永无BUG
-佛曰:
-写字楼里写字间，写字间里程序员；
-程序人员写程序，又拿程序换酒钱。
-酒醒只在网上坐，酒醉还来网下眠；
-酒醉酒醒日复日，网上网下年复年。
-但愿老死电脑间，不愿鞠躬老板前；
-奔驰宝马贵者趣，公交自行程序员。
-别人笑我忒疯癫，我笑自己命太贱；
-不见满街漂亮妹，哪个归得程序员？
-__------__
-/~          ~\                       ,%%%%%%%%,
-|    //^\\//^\|                     ,%%/\%%%%/\%%
-/~~\  ||  o| |o|:~\                  ,%%%\c "" J/%%%
-| |6   ||___|_|_||:|         %.       %%%%/ o  o \%%%
-\__.  /      o  \/'         `%%.     %%%%    _  |%%%
-|   (       O   )           `%%     `%%%%(__Y__)%%'
-/~~~~\    `\  \         /            //       ;%%%%`\-/%%%'
-| |~~\ |     )  ~------~`\            ((       /  `%%%%%%%'
-/' |  | |   /     ____ /~~~)\          \\    .'          |
-(_/'   | | |     /'    |    ( |         \\  /       \  | |
-| | |     \    /   __)/ \          \\/         ) | |
-\  \ \      \/    /' \   `\         \         /_ | |__
-\  \|\        /   | |\___|        (___________)))))))  
-\ |  \____/     | |
-/^~  \        _/ <
-|  |         \       \                神兽保佑
-|  | \        \        \
--^-\  \       |         )
-`\_______/^\______/   
-*/
+
 public class updateDB {
 	public static void main(String[] args){
 		updateDB.calcMetroPrice("上海");
@@ -80,16 +30,15 @@ public class updateDB {
 //		Tools.log("加载数据花费时间:" + String.valueOf(endTime-startTime) + "ms");
 	}
 	
-	
-	
-	
 	/**
-	 * 计算站点票价
+	 * 计算指定城市的票价
+	 * @param cityName 城市名称
 	 */
 	public static void calcMetroPrice(String cityName){
 		Tools.log("开始计算 " + cityName + " 票价");
 		DBHelper dbHelper = new DBHelper();
 		List<Integer> stationList = dbHelper.getStationIDByCityID(dbHelper.getCityIDByName(cityName));
+		//List<Integer> stationList = dbHelper.getAllStationID();
 		List<Edge> edgeList = dbHelper.getEdgeByCityID(dbHelper.getCityIDByName(cityName), 1);
 		for(int i = 0 ; i < stationList.size() - 1 ; i++){
 			String sql = "";
@@ -105,28 +54,25 @@ public class updateDB {
 				}
 
 				Integer weight = result.getWeight();
-
 				//正反反向都插入一遍
 				sql += "(" + startStation +"," + endStation + "," + CalcPrice.getPrice(weight, cityName) + "),";
 				sql += "(" + endStation +"," + startStation + "," + CalcPrice.getPrice(weight, cityName) + "),";
-
+				
 				//这样效率太低
 				//dbHelper.InsertPrice(startStation, endStation, CalcPrice.getPrice(weight, cityName));
 				//dbHelper.InsertPrice(endStation, startStation, CalcPrice.getPrice(weight, cityName));
 			}
-
-			if(sql.equals(""))
+			if(sql.equals(""))	//如果没有查到任何信息
 				continue;
 			//将最后一个','去除
 			sql = sql.substring(0, sql.length() - 1);
-			System.out.println(sql);
+			//System.out.println(sql);
 			dbHelper.InsertPrice(sql);
 
 		}
 		dbHelper.close();
 		Tools.log(cityName +"票价计算完成并成功更新至数据库");
 	}
-	
 	
 	/**
 	 * 更新数据库
